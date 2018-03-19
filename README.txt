@@ -1,0 +1,1 @@
+The main purpose of this document is to describe the main goals of this project.
