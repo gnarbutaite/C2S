@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\DB;
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = DB::table('users')->where('user_type','coach')->get();
-        return view('home',compact('users'));
+        return view('home');
     }
 }

@@ -14,11 +14,7 @@
                         </div>
                     @endif
 
-                    @foreach($users as $user)
-
-                        {{$user->name}}
-
-                    @endforeach
+                    You are logged in!
                 </div>
             </div>
         </div>
