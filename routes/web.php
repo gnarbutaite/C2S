@@ -20,6 +20,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/createAd', 'AdvertisementController@create')->name('create');
 Route::post('new-ad', array('uses' => 'AdvertisementController@store'));
+Route::post('new-chat', array('uses' => 'ChatController@store'));
 
 Auth::routes();
 

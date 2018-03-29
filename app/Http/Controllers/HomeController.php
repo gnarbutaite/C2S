@@ -24,8 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $ads = Advertisement::inRandomOrder()->get();
-
-        return view('home',compact('ads'));
+        $user_id = Auth::id();
+        $ads = Advertisement::whereNotIn('user_id',[$user_id])->get();
+       return view('home',compact('ads'));
     }
 }

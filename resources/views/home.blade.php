@@ -14,6 +14,15 @@
                                 <h1>{{$ad->user->name}}</h1>
                                 <li>{{$ad->title}}</li>
                             </ul>
+                            <div class="container">
+                                {{ Form::open(['action' => 'ChatController@store', 'method' => 'POST']) }}
+
+                                    {{ Form::hidden('coach_id', $ad->user->id)}}
+                                    {{ Form::hidden('ad_id', $ad->id)}}
+                                    {{Form::submit('submit',['class' => 'btn btn-primary'])}}
+
+                                {{ Form::close() }}
+                            </div>
                         </div>
 
                     @endforeach
