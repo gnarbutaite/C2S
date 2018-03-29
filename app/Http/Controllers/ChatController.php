@@ -28,6 +28,11 @@ class ChatController extends Controller
 
     public function show($chat_id){
 
+        $chat_info = Chat::select('coach_id','student_id')->where('id',$chat_id)->first();
+
+        if( Auth::id() != $chat_info->coach_id && Auth::id() != $chat_info->student_id ){
+            return redirect('/home');
+        }
         $messages = Message::where('chat_id',$chat_id)->get();
         return view('chatscreen',compact('messages','chat_id'));
 
