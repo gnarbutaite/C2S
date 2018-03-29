@@ -17,6 +17,7 @@
             </div>
 
         </div>
+
         <div class="form-group row">
             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('First Name   ') }}</label>
 
@@ -67,4 +68,36 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <h1 class="row justify-content-center">My advertisements</h1>
+        <div class="row justify-content-center">
+
+
+
+            @foreach($ads as $ad)
+                <div class="col-md-8" style="margin-bottom:20px">
+                    <div class="card">
+                        <div class="card-header"style="margin-bottom:10px;">{{$ad->title}}</div>
+
+                        <ul class="list-group">
+                            <li class="list-group-item">{{$ad->subject}}</li>
+                            <li class="list-group-item">{{$ad->description}}</li>
+                            <li class="list-group-item">{{$ad->price}}</li>
+                        </ul>
+                    </div>
+                </div>
+            @endforeach
+
+                <a href="{{url('/createAd')}}" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-plus"></span> Add
+                </a>
+
+        </div>
+
+
+
+
+
+
 @endsection

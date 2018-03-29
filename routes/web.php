@@ -17,10 +17,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/createAd', 'AdvertisementController@create')->name('create');
+Route::post('new-ad', array('uses' => 'AdvertisementController@store'));
+
 Auth::routes();
 
+
 Route::post('/profile', 'UserController@profile')->name('profile');
-Route::post('profile', 'UserController@update_avatar')->name('profile');
+Route::any('/profile', 'UserController@update_avatar')->name('profile');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
