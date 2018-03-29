@@ -21,6 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/createAd', 'AdvertisementController@create')->name('create');
 Route::post('new-ad', array('uses' => 'AdvertisementController@store'));
 Route::post('new-chat', array('uses' => 'ChatController@store'));
+Route::post('new-message', array('uses' => 'ChatController@storeMessage'));
+Route::get('/chat','ChatController@overview')->name('chatOverview');
+Route::get('/chat/{chat_id}','ChatController@show')->name('chatOverview');
 
 Auth::routes();
 
