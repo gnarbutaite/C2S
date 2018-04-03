@@ -47,4 +47,29 @@ class ChatController extends Controller
         $message -> save();
         return redirect('/chat/'.$request->chat_id);
     }
+
+    public function ajaxLoad($chat_id){
+
+        $chat_info = Chat::select('coach_id','student_id')->where('id',$chat_id)->first();
+
+        if( Auth::id() != $chat_info->coach_id && Auth::id() != $chat_info->student_id ){
+            return redirect('/home');
+        }
+        $messages = Message::where('chat_id',$chat_id)->get();
+        $message_log = array();
+
+        foreach($messages as $message){
+
+            $user = $message->user->name;
+
+            $message_info = array();
+            $message_info['sender'] = $user;
+            $message_info['message'] = $message['message'];
+            array_push($message_log,$message_info);
+
+
+        }
+
+        return $message_log;
+    }
 }
