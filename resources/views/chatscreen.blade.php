@@ -7,7 +7,7 @@
 
         <div id="message_log">
 
-            <ul>
+            <ul id="message_log_list">
 
             </ul>
 
@@ -76,21 +76,22 @@
                          url: '/chat/ajaxLoad/' + chat_id,
 
                          success: function(data){
-                             $('#message_log ul').html('');
+                             console.log(data);
+                             $('#message_log_list').html('');
                              $.each(data, function() {
                                  $.each(this, function(k, v) {
-                                     if(k == 'sender'){
+                                     if(k === 'sender'){
                                          console.log('{{Auth::user()->name}}')
-                                         if(v == '{{Auth::user()->name}}'){
-                                             $('#message_log ul').append('<li style="color:blue"><b>' + v + '</b></li>');
+                                         if(v === '{{Auth::user()->name}}'){
+                                             $('#message_log_list').append('<li style="color:blue"><b>' + v + '</b></li>');
                                          }
                                          else{
-                                             $('#message_log ul').append('<li><b>' + v + '</b></li>');
+                                             $('#message_log_list').append('<li><b>' + v + '</b></li>');
 
                                          }
                                      }
                                      else{
-                                         $('#message_log ul').append('<li>' + v + '</li>');
+                                         $('#message_log_list').append('<li>' + v + '</li>');
                                      }
                                  });
                              });

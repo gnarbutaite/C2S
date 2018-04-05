@@ -78,13 +78,25 @@
             @foreach($ads as $ad)
                 <div class="col-md-8" style="margin-bottom:20px">
                     <div class="card">
-                        <div class="card-header"style="margin-bottom:10px;">{{$ad->title}}</div>
+                        <div class="card-header"style="margin-bottom:10px;"><a href="advertisement/{{$ad->id}}">{{$ad->title}}</a></div>
 
                         <ul class="list-group">
                             <li class="list-group-item">{{$ad->subject}}</li>
                             <li class="list-group-item">{{$ad->description}}</li>
                             <li class="list-group-item">{{$ad->price}}</li>
                         </ul>
+
+                        {{ Form::open(['action' => 'AdvertisementController@delete', 'method' => 'POST']) }}
+
+
+                        {{ Form::hidden('ad_id', $ad->id)}}
+
+                        {{Form::submit('Delete',['class' => 'btn btn-primary'])}}
+
+                        {{ Form::close() }}
+                    </div>
+
+
                     </div>
                 </div>
             @endforeach

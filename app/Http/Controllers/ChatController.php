@@ -11,13 +11,32 @@ class ChatController extends Controller
 {
     public function store(Request $request){
 
-        print_r($request->coach_id);
-        $chat = new Chat;
-        $chat->advertisement_id = $request->ad_id;
-        $chat->coach_id = $request->coach_id;
-        $chat->student_id = Auth::id();
-        $chat->save();
-        return redirect('/chat');
+        echo $request->ad_id . '<br/>';
+        echo $request->coach_id . '<br/>';
+        echo Auth::id();
+
+        $chat_exists = Chat::where('coach_id', '=', $request->coach_id)
+            ->where('advertisement_id', '=', $request->ad_id)
+            ->where('student_id', '=', Auth::id())->exists();
+
+
+        if($chat_exists == null){
+
+            $chat = new Chat;
+            $chat->advertisement_id = $request->ad_id;
+            $chat->coach_id = $request->coach_id;
+            $chat->student_id = Auth::id();
+            $chat->save();
+            return redirect('/chat');
+
+        }
+
+        else{
+
+            return redirect('/chat');
+
+        }
+
 
     }
 

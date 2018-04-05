@@ -20,6 +20,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/createAd', 'AdvertisementController@create')->name('create');
 Route::post('new-ad', array('uses' => 'AdvertisementController@store'));
+Route::get('/advertisement/{ad_id}', 'AdvertisementController@show');
+
+Route::post('/advertisement/update/', 'AdvertisementController@update');
+Route::post('/advertisement/delete/', 'AdvertisementController@delete');
+
 Route::post('new-chat', array('uses' => 'ChatController@store'));
 Route::post('/new-message', array('uses' => 'ChatController@storeMessage'));
 Route::get('/chat','ChatController@overview')->name('chatOverview');
