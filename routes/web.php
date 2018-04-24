@@ -24,6 +24,7 @@ Route::get('/advertisement/{ad_id}', 'AdvertisementController@show');
 
 Route::post('/advertisement/update/', 'AdvertisementController@update');
 Route::post('/advertisement/delete/', 'AdvertisementController@delete');
+Route::get('/advertisement/filter/{subjectfilter}', 'AdvertisementController@filter')->name('filters');
 
 Route::post('new-chat', array('uses' => 'ChatController@store'));
 Route::post('/new-message', array('uses' => 'ChatController@storeMessage'));

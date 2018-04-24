@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Auth;
 use App\Advertisement;
+use Illuminate\Support\Facades\DB;
 use App\Chat;
 use Illuminate\Http\Request;
 
@@ -52,6 +53,20 @@ class AdvertisementController extends Controller
         Advertisement::where('id',$request->ad_id)->delete();
         Chat::where('advertisement_id',$request->ad_id)->delete();
         return redirect('/profile');
+
+    }
+
+    public function filter($subjectfilter){
+
+        $ad = Advertisement::where('subject',$subjectfilter)
+            ->leftJoin('users', 'users.id', '=', 'advertisements.user_id')->get();
+        $ad_id = Advertisement::where('subject',$subjectfilter)->pluck('id');
+
+        for($i=0;$i<count($ad_id);$i++){
+            $ad[$i]['ad_id'] = $ad_id[$i];
+        }
+
+        return $ad;
 
     }
 
