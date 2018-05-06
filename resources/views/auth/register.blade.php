@@ -5,7 +5,8 @@
         background: url(http://mymaplist.com/img/parallax/back.png);
         background-color: #444;
         background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);
-        background-image: url("kiwi-fruit.jpg");
+
+        background:url(Kiwi_bg.png);
         background-size:cover;
     }
 
