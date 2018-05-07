@@ -18,7 +18,7 @@
             </div>
             @include('layouts.post')
         </div>
-
+    </div>
 </div>
 <script>
     $(document).ready(function(){

@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+<nav class="navbar navbar-expand-md  " style="background-color:#171a1d;">
     <div class="container">
 
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand" style="font-size:30px;font-family: sans-serif; color: snow" href="{{ url('/home') }}">
             <strong> Kiwi</strong>
         </a>
 
@@ -11,8 +11,8 @@
 
 
         <ul class="nav navbar-nav navbar-light ml-auto">
-            <li class="nav-item pull-right">
-                <a class="nav-link" href="#">My Chats</a>
+                    <li class="nav-item pull-right">
+                        <a class="nav-link" href="{{url('/chat')}}" style="font-size:20px; font-family: sans-serif"><b>My Chats</b></a>
             </li>
         </ul>
 
@@ -53,3 +53,9 @@
                     </form>
                 </div>
             </li>
+
+
+        </ul>
+    </div>
+    </div>
+</nav>
