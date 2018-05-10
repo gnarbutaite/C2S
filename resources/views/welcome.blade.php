@@ -1,4 +1,12 @@
 
+<style>
+    .jumbotron{
+
+        opacity: 0.85;
+
+
+    }
+    </style>
 @extends('layouts.app')
 
 @section('content')
