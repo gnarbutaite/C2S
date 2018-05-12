@@ -8,10 +8,10 @@
             <ul class="nav justify-content-end" style="font-size:26px" >
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="glyphicon "></span>About</a>
+                    <a class="nav-link" href="{{url('/about')}}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" >Contact us</a>
+                    <a class="nav-link" href="{{url('/contact')}}" >Contact us</a>
                 </li>
 
             </ul>
