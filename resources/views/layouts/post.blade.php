@@ -8,7 +8,7 @@
 
 @foreach($ads as $ad)
     <div class="container  padding: align-content-xl-around ">
-        <div class=".card">
+        <div class="card">
             <div class="[ col-xs-12 col-sm-offset-x1 justify-content-lg-center ]">
                 <div class="[ panel panel-default ] panel-google-plus">
 

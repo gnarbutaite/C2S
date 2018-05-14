@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container chatscreen">
 
 
         <div id="message_log">
@@ -77,21 +77,37 @@
 
                          success: function(data){
                              console.log(data);
+                             var sender;
+
                              $('#message_log_list').html('');
                              $.each(data, function() {
                                  $.each(this, function(k, v) {
                                      if(k === 'sender'){
-                                         console.log('{{Auth::user()->name}}')
+
                                          if(v === '{{Auth::user()->name}}'){
-                                             $('#message_log_list').append('<li style="color:blue"><b>' + v + '</b></li>');
+
+                                             sender = true;
+
+                                             $('#message_log_list').append('<li style="text-align:right"><b>' + v + '</b></li>');
+
                                          }
                                          else{
+
+                                             sender = false;
+
                                              $('#message_log_list').append('<li><b>' + v + '</b></li>');
 
                                          }
                                      }
                                      else{
-                                         $('#message_log_list').append('<li>' + v + '</li>');
+                                        // console.log(sender);
+                                         if(sender == true){
+                                             $('#message_log_list').append('<li style="text-align:right">' + v + '</li>');
+                                         }
+                                         else{
+                                             $('#message_log_list').append('<li>' + v + '</li>');
+
+                                         }
                                      }
                                  });
                              });

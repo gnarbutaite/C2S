@@ -87,6 +87,16 @@
             text-decoration: none;
             text-transform: uppercase;
         }
+        #message_log{
+            width:33%;
+            margin-left:33%;
+        }
+        #message_log_list li{
+            list-style-type:none;
+        }
+        .chatscreen .form-group{
+            margin-left:33%;
+        }
 
 
   </style>
