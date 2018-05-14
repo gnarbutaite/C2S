@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md  " style="background-color:#171a1d;">
     <div class="container">
 
-        <a class="navbar-brand" style="font-size:30px;font-family: sans-serif; color: snow" href="{{ url('/home') }}">
+        <a class="navbar-brand navbar-brand-centered" style="font-size:30px;font-family: sans-serif; color: snow" href="{{ url('/home') }}">
             <strong> Kiwi</strong>
         </a>
 

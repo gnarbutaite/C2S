@@ -158,7 +158,7 @@
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 
-        <section id="contact">
+        <div id="contact">
             <div class="container">
                 <h1  class="section-title h1 text-center" style="background: beige;font-size: 30px; border-bottom: 1.5px solid black;"> <strong>Get in Touch</strong></h1>
 
@@ -190,21 +190,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
 
     </section>

@@ -49,8 +49,6 @@
 
 
 
-
-
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -72,7 +70,9 @@
             width: 100%;
             margin: 0;
             position: relative;
+            padding-bottom:150px;
         }
+
         #container {
             min-height:100%;
             position:relative;

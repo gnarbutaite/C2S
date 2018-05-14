@@ -1,21 +1,13 @@
 
 
 <style>
-    body{
-        background: url(http://mymaplist.com/img/parallax/back.png);
-        background-color: #444;
-        background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);
-        background-image:url(Kiwi_bg.png);
-        background-repeat: no-repeat;
-        background-size:cover;
-    }
 
     .vertical-offset-100{
         padding-top:100px;
     }
     p{
         padding-top:15px;
-         text-align: center;
+        text-align: center;
     }
 
 

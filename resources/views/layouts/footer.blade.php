@@ -1,11 +1,15 @@
 <style>
-    #footer {
-    position:absolute;
-        margin-top: inherit; /* negative value of footer height */
+    .footer {
+        margin-top: 10%;
+        position:fixed;
+
         height: 150px;
         clear:both;
-        bottom:0;
-        padding-top:20px;
+
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
     }
 
 
@@ -13,10 +17,10 @@
 
 
 <!--Footer-->
-<div id="footer">
 
-    <div style="background-color: #21d192; ">
-        <div class="container">
+<!--<div class="fixed-bottom">-->
+    <div style="background-color: #21d192;margin-top: 4%;">
+        <div class="container ">
             <!--Grid row-->
             <div class="row py-4 d-flex align-items-center " >
 
@@ -32,7 +36,9 @@
     </div>
 
     <div class="container-fluid"  style="background-color: #000000!important; opacity: 0.9;" >
-    <footer class="page-footer font-small blue-grey lighten-5 pt-0 ">
+        <div class="push">
+            <div class="wrapper">
+    <div class="footer font-weight-normal blue-grey lighten-5 ">
 
 
 
@@ -93,8 +99,11 @@
 
 
 
-    </footer>
-
+    </div>
+            </div>
+        </div>
+    </div>
 
     <!--/.Footer-->
 
+<!--</div>-->
