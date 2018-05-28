@@ -37,7 +37,6 @@
 
                             <input type="submit">
                         </form>
-                        <a href="http://www.pornhub.com/" class="btn btn-lg btn-info btn-block">Contact the coach</a>
                     </div>
                 </div>
             </div>
